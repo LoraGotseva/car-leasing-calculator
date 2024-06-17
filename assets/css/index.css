@@ -1,0 +1,123 @@
+@import url("./css-reset.css");
+
+body {
+    background-color: #270722;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    padding: 10px 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #A5668B;
+}
+
+h2 {
+    text-align: center;
+    font-size: 26px;
+    color:#A5668B;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+hr {
+    margin: 20px 0;
+}
+
+select, input[type="text"]{
+    width: 96%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+select {
+    width: 100%;
+}
+
+input[type="range"]{
+    width: 100%;
+    margin: 5px 0;
+    accent-color: #A5668B;
+
+}
+
+select:focus, input[type="text"]:focus {
+    outline: none;
+    border-color: #A5668B;
+    box-shadow: 0 0 5px #7b4765;
+}
+
+.main-container {
+    margin: 50px auto;
+    padding: 40px 42px;
+    max-width: 70%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: #270722;
+}
+
+.inputs-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+}
+
+.values-wrapper {
+    min-width: 45%;
+}
+
+.results-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.left-column-wrapper, .right-column-wrapper {
+    min-width: 45%;
+}
+
+.left-column-wrapper label, .right-column-wrapper label {
+    font-weight: bold;
+}
+
+#total-leasing-cost, #down-payment-result, #monthly-installment, #interest-rate {
+    font-size: 20px;
+    color: #A5668B; 
+
+}
+
+@media only screen and (max-width: 769px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    label, select {
+        font-size: 14px;
+    }
+
+    #total-leasing-cost, #down-payment-result, #monthly-installment, #interest-rate {
+        font-size: 14px;
+    }
+
+    .inputs-wrapper {
+        flex-direction: column;
+        gap: 12px;
+    }
+}

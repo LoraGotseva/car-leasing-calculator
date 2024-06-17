@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Leasing Calculator</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="icon" type="image/x-icon" href="./assets/images/car-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="./assets/js/index.js" defer></script>
+  </head>
+  <body>
+    <div class="main-container">
+        <h1>Car Leasing Calculator</h1>
+        <div class="inputs-wrapper">
+          <div class="values-wrapper">
+            <label for="car-types">Car Type:</label>
+            <select name="car-types" id="car-types">
+              <option value="" disabled selected>Select car type</option>
+              <option value="brand-new">Brand new</option>
+              <option value="used">Used</option>
+            </select>
+            <label for="car-value">Car Value (€10,000 - €200,000):</label>
+            <input type="text" name="car-value-text" id="car-value-text" value="10000">
+            <input type="range" name="car-value-range" id="car-value-range" min="10000" max="200000" value="10000">
+          </div>
+          <div class="values-wrapper">
+            <label for="lease-period">Lease Period (12 - 60 months):</label>
+            <input type="text" name="lease-period-text" id="lease-period-text" value="12">
+            <input type="range" name="lease-period-range" id="lease-period-range" min="12" max="60" value="12">
+            <label for="down-payment">Down Payment (10% - 50%):</label>
+            <input type="text" name="down-payment-text" id="down-payment-text" value="10">
+            <input type="range" name="down-payment-range" id="down-payment-range" min="10" max="50" step="5" value="10">
+          </div>
+        </div>
+        <hr>
+        <h2>Leasing Details</h2>
+        <div class="results-wrapper">
+          <div class="left-column-wrapper">
+            <label>Total Leasing Cost: </label>
+            <label id="total-leasing-cost"></label>
+            <br>
+            <label>Down Payment: </label>
+            <label id="down-payment-result"></label>
+          </div>
+          <div class="right-column-wrapper">
+            <label>Monthly Installment: </label>
+            <label id="monthly-installment"></label>
+            <br>
+            <label>Interest Rate: </label>
+            <label id="interest-rate"></label>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
